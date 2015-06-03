@@ -1,7 +1,7 @@
-def caesar_cipher(string)
+def caesar_cipher(string, shift = 1)
   alphabet   = Array('a'..'z')
-  @encrypter = Hash[alphabet.zip(alphabet.rotate(1))]
+  @encrypter = Hash[alphabet.zip(alphabet.rotate(shift))]
   string.chars.map { |c| @encrypter[c] }
 end
 
-p caesar_cipher("testing")
+p caesar_cipher("testing").join
