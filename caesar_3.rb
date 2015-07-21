@@ -1,4 +1,3 @@
-
 def caesar_cipher(string, shift = 1)
   alphabet  = Array('a'..'z')
   non_caps  = Hash[alphabet.zip(alphabet.rotate(shift))]
