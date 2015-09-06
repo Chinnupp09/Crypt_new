@@ -7,7 +7,7 @@ def caesar_cipher(string, shift = 1)
   
   encrypter = non_caps.merge(caps)
   
-  string.chars.map { |c| encrypter.fetch(c, '?') }
+  string.chars.map { |c| encrypter.fetch(c, c) }
 end
 
 p caesar_cipher("testingzZ1Z").join
